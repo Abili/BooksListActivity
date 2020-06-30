@@ -22,7 +22,6 @@ public class ApiUtil {
 
     public static final String BASE_API_BUILD = "https:/www.googleapis.com/books/v1/volumes";
     public static final String KEY = "key";
-    public static final String API_KEY = "AIzaSyBWIHGGZQYYwYtTgCnaWkcP2t70ajGKYeg";
     public static final String TITLE = "intitle";
     public static final String AUTHOR = "inauthor";
     public static final String PUBLISHER = "inpublisher";
