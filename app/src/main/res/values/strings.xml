@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BooksListActivity</string>
+    <string name="activity_name_books">Books</string>
+    <string name="error_displaying_content">error displaying content!</string>
+    <string name="search">search</string>
+    <string name="advanced_search">Advanced search</string>
+    <string name="no_searchData">so search Data</string>
+</resources>
