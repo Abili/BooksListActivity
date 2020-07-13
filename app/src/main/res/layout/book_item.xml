@@ -13,6 +13,7 @@
         android:weightSum="100">
 
     <ImageView
+        android:id="@+id/bookImg"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="15"

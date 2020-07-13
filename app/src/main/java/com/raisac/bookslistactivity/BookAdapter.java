@@ -3,19 +3,22 @@ package com.raisac.bookslistactivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
     Context mContext;
-
     ArrayList<Book> mBooks;
 
     public BookAdapter(ArrayList<Book> books) {
@@ -47,6 +50,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         TextView publishDate;
         TextView title;
         TextView description;
+        ImageView bookImage;
 
         public BookViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -54,6 +58,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             authros = itemView.findViewById(R.id.author);
             publishDate = itemView.findViewById(R.id.date);
             publishers = itemView.findViewById(R.id.publishers);
+            bookImage = itemView.findViewById(R.id.bookImg);
             itemView.setOnClickListener(this);
 
         }
@@ -63,6 +68,10 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             authros.setText(book.authors);
             publishDate.setText(book.publishedDate);
             publishers.setText(book.publisher);
+            Picasso.with(mContext)
+                    .load(book.thumbnail)
+                    .placeholder(R.drawable.ic_chrome_reader_mode)
+                    .into(bookImage);
 
         }
 
